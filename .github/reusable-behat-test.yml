@@ -1,24 +1,7 @@
 name: Behat Testing
 
 on:
-  push:
-    paths:
-      - '.github/workflows/behat-test.yml'
-      - '**.php'
-      - '**.feature'
-      - 'behat.yml'
-      - 'composer.json'
-  pull_request:
-    paths:
-      - '.github/workflows/behat-test.yml'
-      - '**.php'
-      - '**.feature'
-      - 'behat.yml'
-      - 'composer.json'
-    types:
-      - opened
-      - reopened
-      - synchronize
+  workflow_call:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
