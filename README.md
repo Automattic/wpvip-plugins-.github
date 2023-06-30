@@ -33,3 +33,7 @@ Two steps are needed:
 - Add them to this repository in the file path that you want them in the plugin repositories.
 - Make sure that any reusable workflows have defensive checks so that they don't break on repositories that aren't using a feature/tool.
 - Add the file name(s) to the sync workflow.
+
+## Who came up with this idea?
+
+The WP-CLI organization has a central [set of resusable workflows](https://github.com/wp-cli/.github/tree/main/.github/workflows) and synchronization workflows, so all credit goes to the WP-CLI maintainers and whoever they got the idea from.
