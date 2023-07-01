@@ -26,6 +26,7 @@ jobs:
           TARGET_REPOS: |
             Automattic/custom-metadata
             Automattic/Edit-Flow
+            Automattic/liveblog
             Automattic/media-explorer
             Automattic/WPCOM-Legacy-Redirector
           GITHUB_TOKEN: ${{ secrets.WPVIP_PLUGINS_BOT }}
