@@ -29,4 +29,6 @@ jobs:
             Automattic/media-explorer
             Automattic/WPCOM-Legacy-Redirector
           GITHUB_TOKEN: ${{ secrets.WPVIP_PLUGINS_BOT }}
+          GIT_EMAIL: 138218436+wpvip-plugins-bot@users.noreply.github.com
+          GIT_USERNAME: wpvip-plugins-bot
 
