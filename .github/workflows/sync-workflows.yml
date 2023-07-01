@@ -24,8 +24,9 @@ jobs:
             ^.editorconfig
             ^.github/workflows/behat-test.yml
           TARGET_REPOS: |
-            Automattic/WPCOM-Legacy-Redirector
             Automattic/custom-metadata
+            Automattic/Edit-Flow
             Automattic/media-explorer
+            Automattic/WPCOM-Legacy-Redirector
           GITHUB_TOKEN: ${{ secrets.WPVIP_PLUGINS_BOT }}
 
