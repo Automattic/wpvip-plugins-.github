@@ -23,10 +23,13 @@ You don't - there's nothing to install, and it's only used to communicate with o
 
 ## How are other plugin repositories added into the sync process?
 
-Two steps are needed:
+Three steps are needed:
 
 - Add the bot account with Write access to the new plugin repository.
+- If the default branch is protected, add the bot account to the list of accounts that can bypass needing to create a pull request, and the list of those who can push to the branch.
 - Add the name of the repository to the list of targets in the sync workflow.
+
+Once committed and pushed, this will trigger the sync workflow to start and the new repository will be updated.
 
 ## How do I add new files to be synced down?
 
