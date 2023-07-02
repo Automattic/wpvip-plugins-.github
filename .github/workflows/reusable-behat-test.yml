@@ -24,10 +24,22 @@ jobs:
     outputs:
       exists: ${{ steps.check_files.outputs.files_exists }}
 
+  supported-php-versions:
+    name: Determine Supported PHP Versions
+    runs-on: ubuntu-latest
+    outputs:
+      extensions: ${{ steps.supported-versions-matrix.outputs.extensions }}
+      version: ${{ steps.supported-versions-matrix.outputs.version }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: supported-versions-matrix
+        uses: WyriHaximus/github-action-composer-php-versions-in-range@v1
+
   behat-test:
     name: PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}${{ matrix.experimental && ' (experimental)' || '' }}
     needs:
       - has-behat-tests
+      - supported-php-versions
     if: ${{ needs.has-behat-tests.outputs.exists == 'true' }}
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental == true }}
@@ -50,15 +62,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php:
-        - '5.6'
-        - '7.0'
-        - '7.1'
-        - '7.2'
-        - '7.3'
-        - '7.4'
-        - '8.1'
-        - '8.2'
+        php: ${{ fromJson(needs.supported-php-versions.outputs.version) }}
         wordpress: [ 'latest' ]
         include:
           - php: '8.0'
