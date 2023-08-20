@@ -60,7 +60,7 @@ jobs:
           -c "exec docker-entrypoint.sh mysqld --default-authentication-plugin=mysql_native_password"
 
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         php: ${{ fromJson(needs.supported-php-versions.outputs.version) }}
         wordpress: [ 'latest' ]
