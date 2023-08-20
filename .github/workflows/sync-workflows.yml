@@ -24,6 +24,7 @@ jobs:
             ^.editorconfig
             ^.github/workflows/behat-test.yml
           TARGET_REPOS: |
+            Automattic/Co-Authors-Plus
             Automattic/custom-metadata
             Automattic/Edit-Flow
             Automattic/liveblog
