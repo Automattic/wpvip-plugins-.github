@@ -18,7 +18,7 @@ jobs:
     if: ${{ github.repository_owner == 'Automattic' }}
     steps:
       - name: Sync files
-        uses: adrianjost/files-sync-action@v2
+        uses: adrianjost/files-sync-action@v2.0.4
         with:
           FILE_PATTERNS: |
             ^.editorconfig
