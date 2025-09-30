@@ -24,4 +24,4 @@ on:
 
 jobs:
   behat:
-    uses: automattic/wpvip-plugins-.github/.github/workflows/reusable-behat-test.yml@trunk
+    uses: automattic/wpvip-plugins-.github/.github/workflows/reusable-behat-test.yml@ea734c68fbe92f6b77716e5af3aa76b0753970c7 # v1.0.0
