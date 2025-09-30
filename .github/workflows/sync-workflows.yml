@@ -7,8 +7,8 @@ on:
       - trunk
     paths-ignore:
       - "**.md"
-  schedule:
-    - cron:  '*/10 * * * *' # Run every 10 minutes.
+  # schedule:
+  #   - cron:  '*/10 * * * *' # Run every 10 minutes.
 
 jobs:
 
