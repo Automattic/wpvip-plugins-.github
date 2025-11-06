@@ -1,4 +1,7 @@
 # WordPress VIP Plugins Hub
+
+> **⚠️ ARCHIVED:** This repository has been archived and is no longer actively maintained. Workflows have been paused and manual triggers have been disabled.
+
 Central hub for reusable workflows and similarly common files for WordPress VIP plugins.
 
 This repository contains:

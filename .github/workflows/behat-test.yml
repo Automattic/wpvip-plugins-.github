@@ -20,7 +20,7 @@ on:
       - reopened
       - synchronize
 
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   behat:
